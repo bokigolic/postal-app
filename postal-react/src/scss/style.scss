@@ -1,4 +1,43 @@
-* {
- 
-}
+.tracking-status-steps {
+  >div {
+    .line {
+      position: relative;
+      left: 9px;
+      width: 2px;
+      height: 30px;
+      border-left: 2px dashed gray;
+    }
 
+    .circle {
+      position: relative;
+      background-color: gray;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+
+      .text {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        padding-left: 30px;
+      }
+    }
+
+    &:first-child {
+      .line {
+        display: none;
+      }
+    }
+
+    &.yes {
+      .line{
+        border-left: 2px solid green;
+      }
+      .circle {
+        background-color: green;
+      }
+    }
+
+  }
+}
