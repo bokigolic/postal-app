@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 
+
 const NewParcelWidget = () => {
   /*
   Treba nam forma u kojoj se ukucava
@@ -39,7 +40,12 @@ const NewParcelWidget = () => {
     axios.post('http://localhost:3033/packages', data)
       .then((response)=>{
         // when axios recive response from backend
-        setFormState({...preset});
+        console.log('response', response);
+        if (response && response.data && response.data.id) {
+          const trackingId = response.data.id;
+          window.alert('Your TRACKING ID is: ' + trackingId);
+          setFormState({...preset});
+        }
       })
   };
 
@@ -87,9 +93,10 @@ const NewParcelWidget = () => {
           </select>
         </div>
         <button type="button" onClick={handleClickSubmit}>Send parcel</button>
+      </form>
 
         <p>TODO: prikazati novi tracking id a mozda i sva polja nalepnice</p>
-      </form>
+
     </div>
   )
 };
