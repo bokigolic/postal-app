@@ -1,0 +1,22 @@
+{
+  "packages": [
+    {
+      "street": "12 s street",
+      "city": "Chickago",
+      "state": "Ilinois",
+      "id": 1
+    },
+    {
+      "street": "2265 main st north",
+      "city": "Arlington",
+      "state": "Virginia",
+      "id": 2
+    },
+    {
+      "street": "2265 main st north",
+      "city": "Arlington",
+      "state": "Virginia",
+      "id": 3
+    }
+  ]
+}
