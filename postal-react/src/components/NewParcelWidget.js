@@ -35,7 +35,8 @@ const NewParcelWidget = () => {
     console.log("Novi paket")
     // CREATE
     const data = {
-      ...formState
+      ...formState,
+      status: "Label Created"
     };
     axios.post('http://localhost:3033/packages', data)
       .then((response)=>{
