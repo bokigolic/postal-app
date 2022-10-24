@@ -1,3 +1,15 @@
+.panel {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  max-width: 640px;
+  &.fluid {
+    max-width: unset;
+  }
+}
+
+
 .tracking-status-steps {
   >div {
     .line {
@@ -40,4 +52,17 @@
     }
 
   }
+
+}
+
+table.packages-table {
+ border: 1px solid black;
+ border-spacing: 0px;
+ border-collapse: collapse;
+
+   th, td {
+     padding: 0px 5px;
+     border: 1px solid black;
+   } 
+ 
 }

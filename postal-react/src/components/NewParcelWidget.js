@@ -52,7 +52,7 @@ const NewParcelWidget = () => {
 
 
   return (
-    <div>
+    <div className='panel'>
       <h1>New Parcel Widget</h1>
       <p>This widget is used by carrier when taking package from sender.</p>
       <form>

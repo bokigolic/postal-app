@@ -43,7 +43,7 @@ const TrackingWidget = () => {
 
 
   return (
-    <div>
+    <div className="panel">
       <h1>Tracking widget</h1>
       <p>This widget is free available on webpage for anyone to track his package...</p>
       <form>
