@@ -50,6 +50,9 @@ const PackagesAdminPanel = () => {
             <th>
               actions
             </th>
+            <th>
+              log
+            </th>
           </tr>
         </thead>
         <tbody>

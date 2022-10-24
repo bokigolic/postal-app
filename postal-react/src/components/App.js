@@ -15,6 +15,13 @@ i datum i vreme evidntiranja se uupisuje
 ili da se zove travel history
 https://www.fedex.com/fedextrack/?trknbr=602953869973&trkqual=12024~602953869973~FDEG
 
+
+ZA SLEDECI PUT:
+tracking siget da ima i Tracking log deo gde ce se ispisivatio lokacije i vremena iz tabele trackinglog
+
+takodje u admin panelu treba tabelarni prikaze tabele trackinglog da ne bi morali da otvaramo stalno http://localhost:3033/trackinglog
+
+
 */
 
 
