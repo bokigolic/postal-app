@@ -40,15 +40,45 @@
       "street": "ggggg",
       "city": "Arlington",
       "state": "Ilinois",
-      "status": "Label Created",
+      "status": "On the way",
       "id": 7
     },
     {
       "street": "1235 n",
       "city": "Chickago",
       "state": "Maryland",
-      "status": "Label Created",
+      "status": "On the way",
       "id": 8
+    }
+  ],
+  "trackinglog": [
+    {
+      "packages_id": 7,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666635724510,
+      "id": 1
+    },
+    {
+      "packages_id": 7,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666636029379,
+      "id": 2
+    },
+    {
+      "packages_id": 8,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666636071662,
+      "id": 3
+    },
+    {
+      "packages_id": 8,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666636195775,
+      "id": 4
     }
   ]
 }

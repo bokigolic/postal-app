@@ -57,7 +57,7 @@ const PackagesAdminPanel = () => {
           {
             packages.map((p) => {
               return (
-                <PackagesAdminPanelItem key={p.id} p={p} />
+                <PackagesAdminPanelItem key={p.id} p={p} refresh={refresh} />
               )
             })
           }
