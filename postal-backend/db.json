@@ -40,15 +40,43 @@
       "street": "ggggg",
       "city": "Arlington",
       "state": "Ilinois",
-      "status": "On the way",
+      "status": "Delivered",
       "id": 7
     },
     {
       "street": "1235 n",
       "city": "Chickago",
       "state": "Maryland",
-      "status": "On the way",
+      "status": "Delivered",
       "id": 8
+    },
+    {
+      "street": "78878",
+      "city": "Phoneix",
+      "state": "Arizona",
+      "status": "Delivered",
+      "id": 9
+    },
+    {
+      "street": "3444 n Linkoln st",
+      "city": "Arlington",
+      "state": "Virginia",
+      "status": "Delivered",
+      "id": 10
+    },
+    {
+      "street": "6666 h st",
+      "city": "Rockwille",
+      "state": "Maryland",
+      "status": "Delivered",
+      "id": 11
+    },
+    {
+      "street": "334 n ",
+      "city": "Rockwille",
+      "state": "Maryland",
+      "status": "Delivered",
+      "id": 12
     }
   ],
   "trackinglog": [
@@ -79,6 +107,125 @@
       "location": "RECEIVING POINT",
       "timestamp": 1666636195775,
       "id": 4
+    },
+    {
+      "packages_id": 7,
+      "description": "On vehicle for delivery",
+      "location": "Arlington",
+      "timestamp": 1666637477688,
+      "id": 5
+    },
+    {
+      "packages_id": 8,
+      "description": "On vehicle for delivery",
+      "location": "Arlington",
+      "timestamp": 1666637525148,
+      "id": 6
+    },
+    {
+      "packages_id": 7,
+      "description": "Delivered, in hands to coustomer",
+      "location": "Arlington",
+      "timestamp": 1666637804252,
+      "id": 7
+    },
+    {
+      "packages_id": 7,
+      "description": "Delivered, in hands to coustomer",
+      "location": "Arlington",
+      "timestamp": 1666637827179,
+      "id": 8
+    },
+    {
+      "packages_id": 8,
+      "description": "Delivered, in hands to coustomer",
+      "location": "Arlington",
+      "timestamp": 1666637833320,
+      "id": 9
+    },
+    {
+      "packages_id": 9,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666637868022,
+      "id": 10
+    },
+    {
+      "packages_id": 9,
+      "description": "On vehicle for delivery",
+      "location": "Arlington",
+      "timestamp": 1666637874160,
+      "id": 11
+    },
+    {
+      "packages_id": 9,
+      "description": "Delivered, in hands to coustomer",
+      "location": "Arlington",
+      "timestamp": 1666638003127,
+      "id": 12
+    },
+    {
+      "packages_id": 10,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666638039152,
+      "id": 13
+    },
+    {
+      "packages_id": 10,
+      "description": "On vehicle for delivery",
+      "location": "Arlington",
+      "timestamp": 1666638420312,
+      "id": 14
+    },
+    {
+      "packages_id": 10,
+      "description": "Delivered, in hands to coustomer",
+      "location": "Arlington",
+      "timestamp": 1666638425803,
+      "id": 15
+    },
+    {
+      "packages_id": 11,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666638569284,
+      "id": 16
+    },
+    {
+      "packages_id": 12,
+      "description": "PACKAGE RECEIVED BY FEDEX",
+      "location": "RECEIVING POINT",
+      "timestamp": 1666638861110,
+      "id": 17
+    },
+    {
+      "packages_id": 12,
+      "description": "On vehicle for delivery",
+      "location": "Arlington",
+      "timestamp": 1666638865387,
+      "id": 18
+    },
+    {
+      "packages_id": 12,
+      "description": "Delivered, in hands to coustomer",
+      "location": "Arlington",
+      "timestamp": 1666638868204,
+      "id": 19
+    },
+    {
+      "packages_id": 11,
+      "description": "On vehicle for delivery",
+      "location": "Arlington",
+      "timestamp": 1666638870612,
+      "id": 20
+    },
+    {
+      "packages_id": 11,
+      "description": "Delivered, in hands to coustomer",
+      "location": "Arlington",
+      "timestamp": 1666638894533,
+      "id": 21
     }
   ]
 }

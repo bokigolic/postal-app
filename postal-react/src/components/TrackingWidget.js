@@ -35,7 +35,7 @@ const TrackingWidget = () => {
     stepNumber = 1;
   } else if (status === "On the way") {
     stepNumber = 2;
-  } else if (status === "Out of delivery") {
+  } else if (status === "Out for delivery") {
     stepNumber = 3;
   } else if (status === "Delivered") {
     stepNumber = 4;
@@ -74,7 +74,7 @@ const TrackingWidget = () => {
         <div className={stepNumber >= 3 ? "yes" : "no"} >
           <div className="line"></div>
           <div className="circle">
-            <div className="text">Out of delivery</div>
+            <div className="text">Out for delivery</div>
           </div>
         </div>
         <div className={stepNumber >= 4 ? "yes" : "no"} >
