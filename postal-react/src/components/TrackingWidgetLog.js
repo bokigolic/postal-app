@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { timestampToUsaDate } from "../utils/date-utils";
 
 
 const TrackingWidgetLog = (props) => {
@@ -17,31 +18,39 @@ const TrackingWidgetLog = (props) => {
         }
       })
 
-  }, [trackingId]);
+  }, [trackingId, props.freshness]);
 
 
 
   return (
     <div>
       <h4>Tracking history</h4>
-      {
-        trackingLogItems.map((item) => {
-          return (
-            <div>
-              <div>
-                {item.timestamp}
-              </div>
-              <div>
-                {item.description}
-              </div>
-              <div>
-                {item.location}
-              </div>
-            </div>
-          )
-        })
-      }
 
+      <div className="tracking-history-steps">
+        {
+          trackingLogItems.map((item) => {
+            let displayDate = timestampToUsaDate(item.timestamp);
+            return (
+              <div className="step">
+                <div>
+                  {displayDate}
+                </div>
+                <div className="timeline">
+                  <div className="line-1"></div>
+                  <div className="circle"></div>
+                  <div className="line-2"></div>
+                </div>
+                <div>
+                  {item.description}
+                  <div>
+                    {item.location}
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
 
     </div>
 

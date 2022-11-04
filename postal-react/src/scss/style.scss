@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 .panel {
   margin: 10px;
   padding: 20px;
   border: 1px solid gray;
   border-radius: 6px;
   max-width: 640px;
+
   &.fluid {
     max-width: unset;
   }
@@ -43,9 +48,10 @@
     }
 
     &.yes {
-      .line{
+      .line {
         border-left: 2px solid green;
       }
+
       .circle {
         background-color: green;
       }
@@ -56,13 +62,74 @@
 }
 
 table.packages-table {
- border: 1px solid black;
- border-spacing: 0px;
- border-collapse: collapse;
+  border: 1px solid black;
+  border-spacing: 0px;
+  border-collapse: collapse;
 
-   th, td {
-     padding: 0px 5px;
-     border: 1px solid black;
-   } 
- 
+  th,
+  td {
+    padding: 0px 5px;
+    border: 1px solid black;
+  }
+
+}
+
+.tracking-history-steps {
+  .step {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    font-size: 13px;
+
+    >div {
+      padding: 0px 0px;
+      padding-bottom: 8px;
+    }
+    >.timeline {
+      position: relative;
+      padding: 0 10px;
+
+      .line-1 {
+        position: relative;
+        top: 0px;
+        left: 3px;
+        display: block;
+        width: 2px;
+        height: 6px;
+        background-color: black;
+      }
+
+      .circle {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        border: 2px solid black;
+        background-color: white;
+      }
+
+      .line-2 {
+        position: relative;
+        top: 0px;
+        left: 3px;
+        display: block;
+        width: 2px;
+        height: calc(100% - 14px);
+        background-color: black;
+      }
+    }
+
+    &:first-child {
+      .line-1 {
+        background-color: transparent;
+      }
+    }
+    &:last-child {
+      .line-2 {
+        background-color: transparent;
+      }
+    }
+  }
 }
