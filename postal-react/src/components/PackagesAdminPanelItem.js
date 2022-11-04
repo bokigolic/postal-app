@@ -16,6 +16,7 @@ const PackagesAdminPanelItem = (props) => {
     stepNumber = 4;
   }
 
+  // TASTER 1)
   const handleOnTheWay = () => {
     const package_id = p.id;
     // A)  UPDATE u packages tabeli samo status da se update-uje
@@ -28,28 +29,30 @@ const PackagesAdminPanelItem = (props) => {
       .then((response) => {
         // after create
         // refresh();
+
+        // B) istvoremeno i CREATE novog dogadjaja u talei trackinglog
+        const url2 = "http://localhost:3033/trackinglog"
+        const data = {
+          package_id: package_id,
+          description: 'PACKAGE RECEIVED BY FEDEX',
+          location: 'RECEIVING POINT',
+          timestamp: Date.now()
+        }
+        axios.post(url2, data)
+          .then((response) => {
+            // after create
+            refresh();
+          })
+
       })
 
-    // B) istvoremeno i CREATE novog dogadjaja u talei trackinglog
-    const url2 = "http://localhost:3033/trackinglog"
-    const data = {
-      packages_id: package_id,
-      description: 'PACKAGE RECEIVED BY FEDEX',
-      location: 'RECEIVING POINT',
-      timestamp: Date.now()
-    }
-    axios.post(url2, data)
-      .then((response) => {
-        // after create
-        // refresh();
-      })
   };
 
   /*
   const handleLocation2 = () => {
     const url3 = "http://localhost:3033/trackinglog"
     const data3 = {
-      packages_id: package_id,
+      package_id: package_id,
         description: 'PACKAGE ARRIVED TO MAIN WAREHOUSE ',
         location: 'RECEIVING POINT',
         timestamp: Date.now()
@@ -57,6 +60,7 @@ const PackagesAdminPanelItem = (props) => {
   };
   */
 
+  // TAATER 2)
   const handleOutForDelivery = () => {
     const package_id = p.id;
     // A)  UPDATE u packages tabeli samo status da se update-uje
@@ -69,24 +73,27 @@ const PackagesAdminPanelItem = (props) => {
       .then((response) => {
         // after create
         // refresh();
+
+        // B) istvoremeno i CREATE novog dogadjaja u talei trackinglog
+        const url2 = "http://localhost:3033/trackinglog"
+        const data = {
+          package_id: package_id,
+          description: 'On vehicle for delivery',
+          location: 'Arlington',
+          timestamp: Date.now()
+        }
+        axios.post(url2, data)
+          .then((response) => {
+            // after create
+            refresh();
+          })
+
       })
 
-    // B) istvoremeno i CREATE novog dogadjaja u talei trackinglog
-    const url2 = "http://localhost:3033/trackinglog"
-    const data = {
-      packages_id: package_id,
-      description: 'On vehicle for delivery',
-      location: 'Arlington',
-      timestamp: Date.now()
-    }
-    axios.post(url2, data)
-      .then((response) => {
-        // after create
-        // refresh();
-      })
   };
 
 
+  // TASTER 3)
   const handleDelivred = () => {
     const package_id = p.id;
     // A)  UPDATE u packages tabeli samo status da se update-uje
@@ -99,21 +106,23 @@ const PackagesAdminPanelItem = (props) => {
       .then((response) => {
         // after create
         // refresh();
+
+        // B) istvoremeno i CREATE novog dogadjaja u talei trackinglog
+        const url2 = "http://localhost:3033/trackinglog"
+        const data = {
+          package_id: package_id,
+          description: 'Delivered, in hands to coustomer',
+          location: 'Arlington',
+          timestamp: Date.now()
+        }
+        axios.post(url2, data)
+          .then((response) => {
+            // after create
+            refresh();
+          })
+
       })
 
-    // B) istvoremeno i CREATE novog dogadjaja u talei trackinglog
-    const url2 = "http://localhost:3033/trackinglog"
-    const data = {
-      packages_id: package_id,
-      description: 'Delivered, in hands to coustomer',
-      location: 'Arlington',
-      timestamp: Date.now()
-    }
-    axios.post(url2, data)
-      .then((response) => {
-        // after create
-        // refresh();
-      })
   };
 
 

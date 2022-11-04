@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PackagesAdminPanelItem from "./PackagesAdminPanelItem";
 
 const PackagesAdminPanel = () => {
@@ -16,11 +16,20 @@ const PackagesAdminPanel = () => {
         }
       })
 
-  }
+  };
+
+  useEffect(() =>{
+    // kad se komponneta mountuje
+    // automtaski prvi refresh samo jednom
+    refresh();
+  },[])
+
+
 
   const handleRefresh = (e) => {
+    // rucni refresh na click
     refresh();
-  }
+  };
 
 
   return (

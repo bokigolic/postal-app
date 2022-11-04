@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import TrackingWidgetLog from "./TrackingWidgetLog";
 
 
 const TrackingWidget = () => {
@@ -55,7 +56,7 @@ const TrackingWidget = () => {
         />
         <button type="button" onClick={handleClick}>Find</button>
       </form>
-      
+
       <p>{statusText}</p>
 
       <div className="tracking-status-steps">
@@ -84,6 +85,9 @@ const TrackingWidget = () => {
           </div>
         </div>
       </div>
+
+
+      <TrackingWidgetLog trackingId={trackingId} />
     </div>
   )
 };
