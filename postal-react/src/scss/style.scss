@@ -81,8 +81,13 @@ table.packages-table {
     justify-content: flex-start;
     align-items: stretch;
 
+    font-size: 13px;
 
-    .timeline {
+    >div {
+      padding: 0px 0px;
+      padding-bottom: 8px;
+    }
+    >.timeline {
       position: relative;
       padding: 0 10px;
 
@@ -92,7 +97,7 @@ table.packages-table {
         left: 3px;
         display: block;
         width: 2px;
-        height: 4px;
+        height: 6px;
         background-color: black;
       }
 
@@ -111,7 +116,7 @@ table.packages-table {
         left: 3px;
         display: block;
         width: 2px;
-        height: calc(100% - 12px);
+        height: calc(100% - 14px);
         background-color: black;
       }
     }
