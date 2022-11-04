@@ -17,31 +17,38 @@ const TrackingWidgetLog = (props) => {
         }
       })
 
-  }, [trackingId]);
+  }, [trackingId, props.freshness]);
 
 
 
   return (
     <div>
       <h4>Tracking history</h4>
-      {
-        trackingLogItems.map((item) => {
-          return (
-            <div>
-              <div>
-                {item.timestamp}
-              </div>
-              <div>
-                {item.description}
-              </div>
-              <div>
-                {item.location}
-              </div>
-            </div>
-          )
-        })
-      }
 
+      <div className="tracking-history-steps">
+          {
+            trackingLogItems.map((item) => {
+              return (
+                <div className="step">
+                  <div>
+                    {item.timestamp}
+                  </div>
+                  <div className="timeline">
+                    <div className="line-1"></div>
+                    <div className="circle"></div>
+                    <div className="line-2"></div>
+                  </div>
+                  <div>
+                    {item.description}
+                  </div>
+                  <div>
+                    {item.location}
+                  </div>
+                </div>
+              )
+            })
+          }
+      </div>
 
     </div>
 

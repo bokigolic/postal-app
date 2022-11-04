@@ -1,21 +1,30 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TrackingWidgetLog from "./TrackingWidgetLog";
 
 
 const TrackingWidget = () => {
 
-  const [trackingId, setTrackingId] = useState("");
+  const [trackingId1, setTrackingId1] = useState(""); // state polja trackingId
+  const [trackingId, setTrackingId] = useState(""); // kad korisnik klikne TRACK onda se ovde upisuje ceo trackingId
   const [status, setStatus] = useState("");
+  const [freshness, setFreshness] = useState(0);
 
-  const handleClick = () => {
-    console.log("Track", trackingId)
+  const handleClickTrack = () => {
+    // click 
+    console.log("Track", trackingId1);
+    setTrackingId(trackingId1);
+    setFreshness(freshness + 1);
+  };
+  
+  useEffect(()=>{
+    // kad korisnik klikne na TRACK upise se  state trackingId i onda se voo automatski pozove
     const url = 'http://localhost:3033/packages/' + trackingId;
     axios.get(url)
       .then((response) => {
         console.log(response);
         if (response && response.data && response.data.status) {
-          window.alert("Status for package " + trackingId + " is: " + response.data.status)
+          // window.alert("Status for package " + trackingId + " is: " + response.data.status)
           setStatus(response.data.status);
         } else {
           setStatus("");
@@ -24,7 +33,10 @@ const TrackingWidget = () => {
       .catch((err) => {
         setStatus("");
       })
-  }
+
+  },[trackingId, freshness])
+
+
 
   let statusText = null;
   if (status !== '') {
@@ -51,10 +63,10 @@ const TrackingWidget = () => {
         <label>Enter package tracking id </label>
         <input
           type="text"
-          value={trackingId}
-          onChange={(e) => { setTrackingId(e.target.value) }}
+          value={trackingId1}
+          onChange={(e) => { setTrackingId1(e.target.value) }}
         />
-        <button type="button" onClick={handleClick}>Find</button>
+        <button type="button" onClick={handleClickTrack}>Track</button>
       </form>
 
       <p>{statusText}</p>
@@ -87,7 +99,7 @@ const TrackingWidget = () => {
       </div>
 
 
-      <TrackingWidgetLog trackingId={trackingId} />
+      <TrackingWidgetLog trackingId={trackingId} freshness={freshness} />
     </div>
   )
 };
